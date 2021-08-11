@@ -5,6 +5,7 @@ public class ApiResponse {
     private String message;
     private boolean success;
     private HttpStatus status;
+    private static final Author author=new Author();
 
     public ApiResponse() {
     }
@@ -35,6 +36,10 @@ public class ApiResponse {
         this.message = message;
         this.success = success;
         this.status = status;
+    }
+
+    public static Author getAuthor() {
+        return author;
     }
 
     public String getMessage() {
