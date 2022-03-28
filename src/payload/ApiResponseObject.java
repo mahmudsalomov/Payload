@@ -1,25 +1,25 @@
 package payload;
 
 
-public class ApiResponseObject extends ApiResponse {
-    private Object object;
+public class ApiResponseObject<T>extends ApiResponse {
+    private T object;
 
-    public ApiResponseObject(String message, boolean success, Object object) {
+    public ApiResponseObject(String message, boolean success, T object) {
         super(message, success);
         this.object = object;
     }
 
-    public ApiResponseObject(HttpStatus status, Object object) {
+    public ApiResponseObject(HttpStatus status, T object) {
         super(status);
         this.object = object;
     }
 
-    public ApiResponseObject(String message, HttpStatus status, Object object) {
+    public ApiResponseObject(String message, HttpStatus status, T object) {
         super(message,status);
         this.object = object;
     }
 
-    public ApiResponseObject(String message, boolean success, HttpStatus status, Object object) {
+    public ApiResponseObject(String message, boolean success, HttpStatus status, T object) {
         super(message, success,status);
         this.object = object;
     }
@@ -28,7 +28,17 @@ public class ApiResponseObject extends ApiResponse {
         return object;
     }
 
-    public void setObject(Object object) {
+    public void setObject(T object) {
         this.object = object;
+    }
+
+    @Override
+    public String toString() {
+        return "ApiResponseObject{" +
+                "message='" + getMessage() + '\'' +
+                ", success=" + isSuccess() +
+                ", status=" + getStatus() +
+                ", object=" + object +
+                '}';
     }
 }

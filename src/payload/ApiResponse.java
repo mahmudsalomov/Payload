@@ -1,7 +1,7 @@
 package payload;
 
 
-public class ApiResponse {
+public class ApiResponse implements Response{
     private String message;
     private boolean success;
     private HttpStatus status;
@@ -64,5 +64,14 @@ public class ApiResponse {
 
     public void setStatus(HttpStatus status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "ApiResponse{" +
+                "message='" + message + '\'' +
+                ", success=" + success +
+                ", status=" + status +
+                '}';
     }
 }

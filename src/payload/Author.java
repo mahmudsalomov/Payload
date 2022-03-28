@@ -1,11 +1,13 @@
 package payload;
 
 public class Author {
-    private final String name="Mahmud Salomov";
-    private final String telegram="@complexio";
-    private final String facebook="https://www.facebook.com/mahmud.salomov";
-    private final String linkedin="https://www.linkedin.com/in/mahmudsalomov/";
-    private final String github="https://github.com/mahmudsalomov";
+    private static final String name="Mahmud Salomov";
+    private static final String telegram="@complexio";
+    private static final String facebook="https://www.facebook.com/mahmud.salomov";
+    private static final String linkedin="https://www.linkedin.com/in/mahmudsalomov/";
+    private static final String github="https://github.com/mahmudsalomov";
+
+
 
     public String getName() {
         return name;
