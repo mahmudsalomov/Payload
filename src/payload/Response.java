@@ -1,6 +1,6 @@
 package payload;
 
-public interface Response {
+public interface Response<T> {
     boolean isSuccess();
     String getMessage();
 }

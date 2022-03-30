@@ -1,7 +1,7 @@
 package payload;
 
 
-public class ApiResponseObject<T>extends ApiResponse {
+public class ApiResponseObject<T>extends ApiResponse<T> {
     private T object;
 
     public ApiResponseObject(String message, boolean success, T object) {
@@ -24,7 +24,7 @@ public class ApiResponseObject<T>extends ApiResponse {
         this.object = object;
     }
 
-    public Object getObject() {
+    public T getObject() {
         return object;
     }
 
@@ -41,4 +41,13 @@ public class ApiResponseObject<T>extends ApiResponse {
                 ", object=" + object +
                 '}';
     }
+//    @Override
+//    public HttpEntity<?> response() {
+//        return ResponseEntity.status(org.springframework.http.HttpStatus.valueOf(getStatus().getCode())).body(this);
+//    }
+
+//    @Override
+//    public ApiResponseObject<T> get() {
+//        return this;
+//    }
 }

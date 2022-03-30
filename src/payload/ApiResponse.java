@@ -1,7 +1,7 @@
 package payload;
 
 
-public class ApiResponse implements Response{
+public class ApiResponse<T> implements Response<T>{
     private String message;
     private boolean success;
     private HttpStatus status;
